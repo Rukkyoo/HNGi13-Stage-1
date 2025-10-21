@@ -240,7 +240,7 @@ header a {
   text-decoration: none;
   color: #fff;
   background: #0077cc;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 0.6rem;
   border-radius: 0.5rem;
   transition: background 0.3s ease, transform 0.2s ease;
   margin-right: 1rem;
