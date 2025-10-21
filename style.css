@@ -186,73 +186,75 @@ header a {
 
 /* About Page */
 .about-page {
-  padding: 2rem;
+  background: #fff;
   height: 80vh;
-  max-width: 800px;
-  margin: 2rem auto;
-  background: white;
-  border-radius: 1rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem 3rem;
   overflow-y: scroll;
+  border-radius: 1rem;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease;
 }
 
+/* Page Heading */
 .about-page h1 {
   text-align: center;
-  color: #ffffff;
-  font-size: 1.7rem;
-  margin-bottom: 1rem;
-  background-color: rgb(112, 112, 226);
-  width: 100%;
-  border-radius: 0.5rem;
+  font-size: 2rem;
+  color: rgb(112, 112, 226);
+  margin-bottom: 1.5rem;
 }
 
-.about-bio {
-  margin-top: 1.5rem;
-  background-color: #ffffff;
-  line-height: 25px;
-  color: #000000;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: #000000 1px solid;
+/* Section Styles */
+.about-page section {
+  margin-bottom: 1.5rem;
 }
 
-.about-goals {
-  margin-top: 1.5rem;
-  background-color: #ffffff;
-  line-height: 25px;
-  color: #000000;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: #000000 1px solid;
+.about-page h2 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  position: relative;
 }
 
-.about-confidence {
-  margin-top: 1.5rem;
-  background-color: #ffffff;
-  line-height: 25px;
-  color: #000000;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: #000000 1px solid;
+.about-page h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 40px;
+  height: 3px;
+  background: rgb(112, 112, 226);
+  border-radius: 2px;
 }
 
-.about-future {
-  margin-top: 1.5rem;
-  background-color: #ffffff;
-  line-height: 25px;
-  color: #000000;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: #000000 1px solid;
+.about-page p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
 }
-.about-thoughts {
-  margin-top: 1.5rem;
-  background-color: #ffffff;
-  line-height: 25px;
-  color: #000000;
-  padding: 1rem;
+
+/* Navigation Links */
+.nav-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #0077cc;
+  padding: 0.6rem 1rem;
   border-radius: 0.5rem;
-  border: #000000 1px solid;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-right: 1rem;
+}
+
+.nav-link:hover {
+  background: #005fa3;
+  transform: translateY(-2px);
+}
+
+.nav-btn-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /* Form Container */
@@ -427,11 +429,35 @@ a:focus {
   .user-dislikes {
     grid-column: 2 / -1;
   }
+
+  .about-page {
+    padding: 1.5rem;
+  }
+
+  .about-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .nav-link {
+    display: block;
+    margin-bottom: 0.75rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .user-avatar {
     width: 200px;
     height: 200px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
