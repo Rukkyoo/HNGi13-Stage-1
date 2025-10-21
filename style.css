@@ -27,6 +27,13 @@ body {
   margin: 0 auto;
 }
 
+.nav-link {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: rgb(226, 112, 215);
+  font-weight: 600;
+}
+
 /* Header & Avatar Layout */
 .profile-card > header {
   background: rgb(112, 112, 226);
